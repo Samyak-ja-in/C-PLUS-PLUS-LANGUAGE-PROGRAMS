@@ -1,0 +1,51 @@
+//single inheritance.)
+#include<conio.h>
+#include<iostream.h>
+class whole
+{
+private:
+int a,b;
+public:
+void setdata()
+{
+cout<<"enter two integral numbere";
+cin>>a>>b;
+}
+int geta()
+{return(a);}
+int getb()
+{return(b);}
+void add()
+{
+cout<<"addition is="<<a+b;
+}
+};
+class integer:public whole
+{
+private:
+int p,q;
+public:
+void setdata()
+{
+p=geta();
+q=getb();
+}
+void sub()
+{
+cout<<"\nsubtraction is="<<p-q;
+}
+};
+void main()
+{
+clrscr();
+integer I;
+I.whole::setdata();
+I.add();
+I.integer::setdata();
+I.sub();
+getch();
+}
+      //whole as a parent class,base class
+	   //integer is the baby class ,derived class
+       //ek object apni hi class ke private members ko access
+	//nhi kar sakta.
